@@ -4,6 +4,7 @@ import { Roboto } from 'next/font/google'
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react"
 
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
       className={`${roboto.className} dark:bg-blue-950`}
       >
+      <Analytics/>
       <AppContextProvider>
       <Providers>
       <Toaster

@@ -4,7 +4,7 @@ import Reveal from "./Reveal";
 
 
 export default function Contact(){
-    const publicKey = process.env.PUBLIC_KEY
+    const publicKey = process.env.EMAILJS_PUBLIC_KEY
     const templateId = process.env.TEMPLATE_ID
     const serviceId = process.env.SERVICE_ID
     return (

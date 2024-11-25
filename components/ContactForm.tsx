@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 
 export default function ContactForm({publicKey,serviceId,templateId}:{publicKey:string|undefined,serviceId:string|undefined,templateId:string|undefined}){
     const form = useRef<HTMLFormElement | null>(null);
-    console.log(publicKey,serviceId,templateId)
 
     const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
