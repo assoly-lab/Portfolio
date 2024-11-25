@@ -19,7 +19,7 @@ export default function Hero(){
                     <p className="text-4xl font-semibold">Abdelmajid Alahyane</p>
                     <p className="text-2xl text-gray-600 font-semibold dark:text-gray-300">Fullstack Developer</p>
                     <div className="buttons flex gap-4 justify-center font-medium">
-                        <Link download="cv-en.pdf" href={'/cv-en.pdf'} rel="noopener noreferrer"
+                        <Link download target="_blank" href={'/cv-en.pdf'} rel="noopener noreferrer"
                         className="px-6 py-3 rounded-s-full rounded-e-full border-2 text-black bg-white border-gray-600 hover:bg-[#6C63FF] hover:text-white transition-all duration-300 ease-in-out">Download CV</Link>
                         <Link href={'#projects'} className="text-white bg-[#8A3FFC] px-6 py-2 rounded-s-full rounded-e-full hover:bg-[#6C63FF] transition-all duration-300 ease-in-out flex justify-center items-center"
                         >See my work</Link>
