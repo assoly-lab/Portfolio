@@ -1,0 +1,48 @@
+{
+    "navigation":{
+        "skills":"Compétences",
+        "projects":"Projets",
+        "contact":"Contact"
+    },
+    "hero":{
+        "greeting":"Bonjour, je suis",
+        "post":"Développeur Fullstack",
+        "buttons":{
+            "download":"Télécharger le CV",
+            "work":"Voir mes projets"
+        }
+    },
+    "skills":{
+        "title":"Mes Compétences",
+        "description":"J'ai toujours été curieux de savoir comment la technologie pouvait transformer des idées créatives en réalité. Cette curiosité s'est transformée en une passion pour la résolution de problèmes, l'exploration de nouveaux défis et la concrétisation de concepts par le biais du code. Pour moi, chaque projet est une chance d'apprendre, de grandir et de créer quelque chose de significatif."
+    },
+    "projects":{
+        "title":"Mes Projets",
+        "type":"Projet personnel"
+
+    
+    },
+    "contact":{
+        "title":"Contact",
+        "description":{
+            "title":"Engageons une discussion.", 
+            "part-one":"Contactez-moi à l'adresse ",
+            "email":"abdelmajid.alahyane@gmail.com",
+            "part-two":" ou en remplissant le formulaire ci-dessous."
+        },
+        "form":{
+            "labels":{
+                "name":"Nom",
+                "email":"Email",
+                "message":"Message"
+            },
+            "placeholders":{
+                "name":"Entrez votre nom",
+                "email":"Entrez votre e-mail",
+                "message":"Écrivez votre message...",
+                "send":"Envoyer"
+            }
+        }
+    }
+    
+}

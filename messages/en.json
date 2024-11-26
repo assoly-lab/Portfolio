@@ -1,0 +1,48 @@
+{
+    "navigation":{
+        "skills":"Skills",
+        "projects":"Projects",
+        "contact":"Contact"
+    },
+    "hero":{
+        "greeting":"Hello, i'm",
+        "post":"Fullstack Developer",
+        "buttons":{
+            "download":"Download CV",
+            "work":"See my work"
+        }
+    },
+    "skills":{
+        "title":"My Skills",
+        "description":"I've always been curious about how technology can turn creative ideas into reality. What began as curiosity has turned into a passion for solving problems, exploring new challenges, and bringing concepts to life through code. For me, every project is a chance to learn, grow, and create something meaningful."
+    },
+
+    "projects":{
+        "title":"My Projects",
+        "type":"Personal project"
+    
+    },
+    "contact":{
+        "title":"Contact",
+        "description":{
+            "title":"Let's have a chat",
+            "part-one":"Contact me at ",
+            "email":"abdelmajid.alahyane@gmail.com",
+            "part-two":" or by filling the form bellow"
+        },
+        "form":{
+            "labels":{
+                "name":"Name",
+                "email":"Email",
+                "message":"Message"
+            },
+            "placeholders":{
+                "name":"Enter your name",
+                "email":"Entrez your email",
+                "message":"Write your message...",
+                "send":"Send"
+            }
+        }
+    }
+    
+}

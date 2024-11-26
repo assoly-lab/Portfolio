@@ -1,14 +1,18 @@
 import Reveal from "./Reveal";
 import {skillSet} from "@/utils/ProjectsList"
+import { useTranslations } from "next-intl";
 
 
 
 export default function Skills(){
+
+    const t = useTranslations("skills")
+
     return (
         <>
             <div id="skills" className="flex-1  h-full w-full flex flex-col gap-8">
                 <Reveal x={-100} opacity={0} >
-                    <h1 className="relative text-4xl font-semibold z-20 w-fit ">My skills
+                    <h1 className="relative text-4xl font-semibold z-20 w-fit ">{t("title")}
                         <span className="absolute top-6 left-1 w-full h-6 bg-[#86A0ED] -z-10"></span>
                     </h1>
                 </Reveal>
@@ -82,9 +86,7 @@ export default function Skills(){
                         )
                         })
                     }
-                    <p className="text-xl w-full mt-6">I’ve always been curious about how technology can turn creative ideas into reality.
-                    What began as curiosity has turned into a passion for solving problems, exploring new challenges, and bringing concepts to life through code.
-                    For me, every project is a chance to learn, grow, and create something meaningful.
+                    <p className="text-xl w-full mt-6">{t("description")}
                     </p>
                     </div>
                 </Reveal>

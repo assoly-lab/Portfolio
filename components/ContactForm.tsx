@@ -3,9 +3,12 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import { motion } from "framer-motion"
+import { useTranslations } from 'next-intl';
 
 export default function ContactForm({publicKey,serviceId,templateId}:{publicKey:string|undefined,serviceId:string|undefined,templateId:string|undefined}){
     const form = useRef<HTMLFormElement | null>(null);
+    const t = useTranslations("contact.form")
+
 
     const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -34,13 +37,13 @@ export default function ContactForm({publicKey,serviceId,templateId}:{publicKey:
         transition={{duration:0.3,ease:'easeInOut'}}
 
         >
-            <label htmlFor='name' className='cursor-pointer text-white w-[95%] md:w-[80%]'>Name</label>
-            <input id="name" type="text" name="user_name" placeholder='Enter your name' className='text-base bg-white rounded-md py-2 px-2 placeholder:text-gray-600 placeholder:text-sm focus:outline-white w-[95%] md:w-[80%]' />
-            <label htmlFor='email' className='cursor-pointer text-white w-[95%] md:w-[80%]'>Email</label>
-            <input id="email" type="email" name="user_email" placeholder='Enter your email' className='text-base bg-white rounded-md py-2 px-2 placeholder:text-gray-600 placeholder:text-sm focus:outline-white w-[95%] md:w-[80%]' />
-            <label htmlFor='message' className='cursor-pointer text-white w-[95%] md:w-[80%]'>Message</label>
-            <textarea id="message" placeholder='Write your message...' name="message" className='text-base bg-white rounded-md py-2 px-2 placeholder:text-gray-600 placeholder:text-sm focus:outline-white h-24 w-[95%] md:w-[80%]' />
-            <input type="submit" value="Send" className='bg-white hover:bg-gray-100 transition-all duration-300 ease-in-out text-black font-semibold rounded-md py-2 px-4 w-fit cursor-pointer self-center' />
+            <label htmlFor='name' className='cursor-pointer text-white w-[95%] md:w-[80%]'>{t("labels.name")}</label>
+            <input id="name" type="text" name="user_name" placeholder={`${t("placeholders.name")}`} className='text-base bg-white rounded-md py-2 px-2 placeholder:text-gray-600 placeholder:text-sm focus:outline-white w-[95%] md:w-[80%]' />
+            <label htmlFor='email' className='cursor-pointer text-white w-[95%] md:w-[80%]'>{t("labels.email")}</label>
+            <input id="email" type="email" name="user_email" placeholder={`${t("placeholders.email")}`} className='text-base bg-white rounded-md py-2 px-2 placeholder:text-gray-600 placeholder:text-sm focus:outline-white w-[95%] md:w-[80%]' />
+            <label htmlFor='message' className='cursor-pointer text-white w-[95%] md:w-[80%]'>{t("labels.message")}</label>
+            <textarea id="message" placeholder={`${t("placeholders.message")}`} name="message" className='text-base bg-white rounded-md py-2 px-2 placeholder:text-gray-600 placeholder:text-sm focus:outline-white h-24 w-[95%] md:w-[80%]' />
+            <input type="submit" value={`${t("placeholders.send")}`} className='bg-white hover:bg-gray-100 transition-all duration-300 ease-in-out text-black font-semibold rounded-md py-2 px-4 w-fit cursor-pointer self-center' />
         </motion.form>
     )
 }

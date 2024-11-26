@@ -1,10 +1,12 @@
 'use client'
 
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import Reveal from "./Reveal";
 
 export default function Hero(){
-
+    const t = useTranslations("hero")
+    const locale = useLocale()
     return (
         <div className="md:w-[80%] h-full flex flex-col md:flex-row gap-8 md:justify-center md:items-center" >
             <Reveal x={-100} scale={0.3} opacity={0} delay={0.3} >
@@ -15,14 +17,14 @@ export default function Hero(){
             </Reveal>
             <Reveal x={100} opacity={0} delay={0.3} >
                 <div className="relative flex flex-col md:flex-1 gap-4 text-center z-30" >
-                    <p className="text-gray-600 text-lg font-medium dark:text-gray-300">Hello, i&apos;m</p>
+                    <p className="text-gray-600 text-lg font-medium dark:text-gray-300">{t("greeting")}</p>
                     <p className="text-4xl font-semibold">Abdelmajid Alahyane</p>
-                    <p className="text-2xl text-gray-600 font-semibold dark:text-gray-300">Fullstack Developer</p>
+                    <p className="text-2xl text-gray-600 font-semibold dark:text-gray-300">{t("post")}</p>
                     <div className="buttons flex gap-4 justify-center font-medium">
-                        <Link download target="_blank" href={'/cv-en.pdf'} rel="noopener noreferrer"
-                        className="px-6 py-3 rounded-s-full rounded-e-full border-2 text-black bg-white border-gray-600 hover:bg-[#6C63FF] hover:text-white transition-all duration-300 ease-in-out">Download CV</Link>
+                        <Link download target="_blank" href={`/cv-${locale}.pdf`} rel="noopener noreferrer"
+                        className="px-6 py-3 rounded-s-full rounded-e-full border-2 text-black bg-white border-gray-600 hover:bg-[#6C63FF] hover:text-white transition-all duration-300 ease-in-out">{t("buttons.download")}</Link>
                         <Link href={'#projects'} className="text-white bg-[#8A3FFC] px-6 py-2 rounded-s-full rounded-e-full hover:bg-[#6C63FF] transition-all duration-300 ease-in-out flex justify-center items-center"
-                        >See my work</Link>
+                        >{t("buttons.work")}</Link>
                     </div>
                 </div>
             </Reveal>
